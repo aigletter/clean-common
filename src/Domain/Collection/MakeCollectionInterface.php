@@ -4,5 +4,5 @@ namespace Aigletter\CleanCommon\Domain\Collection;
 
 interface MakeCollectionInterface
 {
-    public function makeCollection(array $items = []): Collection;
+    public function make(array $items = []): Collection;
 }
