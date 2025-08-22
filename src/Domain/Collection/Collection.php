@@ -40,7 +40,7 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
 
     public function first(?callable $callback = null): mixed;
 
-    public function contain(mixed $value): bool;
+    public function contains(mixed $value): bool;
 
     public function shuffle(): static;
 
@@ -49,4 +49,6 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
     public function filter(callable $callback): static;
 
     public function reduce(callable $callback, mixed $initial = null): mixed;
+
+    public function groupBy(callable $callback): static
 }
