@@ -1,0 +1,19 @@
+{
+    "name": "aigletter/clean-common",
+    "description": "Contracts for clean architecture",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aigletter\\CleanCommon\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aigletter",
+            "email": "aigletter@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
