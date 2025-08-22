@@ -3,9 +3,36 @@
 namespace Aigletter\CleanCommon\Domain\Collection;
 
 use Aigletter\CleanCommon\Domain\Contracts\Arrayable;
-use Aigletter\CleanCommon\Domain\Contracts\Jsonable;
 
-interface Collection extends Arrayable, Jsonable
+interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Countable
 {
+    public function map(callable $callback): static;
 
+    public function get(string|int $key, mixed $default = null): mixed;
+
+    public function set(string|int $key, mixed $value): void;
+
+    public function remove(string|int $key): void;
+
+    public function push(mixed ...$value): void;
+
+    public function pop(): mixed;
+
+    public function shift(): mixed;
+
+    public function unshift(mixed ...$value): void;
+
+    public function each(callable $callback, mixed ...$args): static;
+
+    public function keyBy(string|callable $key): static;
+
+    public function pluck(string|callable $key): static;
+
+    public function keys(): static;
+
+    public function values(): static;
+
+    public function slice(int $start, ?int $length = null): static;
+
+    public function merge(Collection $collection): static;
 }
