@@ -36,7 +36,7 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
 
     public function merge(Collection $collection): static;
 
-    public function group(string|callable $key): static;
+    public function groupBy(string|callable $callback): static;
 
     public function first(?callable $callback = null): mixed;
 
@@ -49,6 +49,4 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
     public function filter(callable $callback): static;
 
     public function reduce(callable $callback, mixed $initial = null): mixed;
-
-    public function groupBy(callable $callback): static
 }
