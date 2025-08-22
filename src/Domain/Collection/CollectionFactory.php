@@ -13,6 +13,6 @@ class CollectionFactory
 
     public static function make(array $items = []): Collection
     {
-        return self::$factory->makeCollection($items);
+        return self::$factory->make($items);
     }
 }
