@@ -35,4 +35,18 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
     public function slice(int $start, ?int $length = null): static;
 
     public function merge(Collection $collection): static;
+
+    public function group(string|callable $key): static;
+
+    public function first(?callable $callback = null): mixed;
+
+    public function contain(mixed $value): bool;
+
+    public function shuffle(): static;
+
+    public function chunk(int $length): static;
+
+    public function filter(callable $callback): static;
+
+    public function reduce(callable $callback, mixed $initial = null): mixed;
 }
