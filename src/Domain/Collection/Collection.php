@@ -46,7 +46,7 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
 
     public function chunk(int $length): static;
 
-    public function filter(callable $callback): static;
+    public function filter(?callable $callback = null): static;
 
     public function reduce(callable $callback, mixed $initial = null): mixed;
 }
