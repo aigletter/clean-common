@@ -12,6 +12,8 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
 
     public function set(string|int $key, mixed $value): void;
 
+    public function has(string|int $key): bool;
+
     public function remove(string|int $key): void;
 
     public function push(mixed ...$value): void;
