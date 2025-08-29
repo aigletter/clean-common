@@ -51,4 +51,6 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
     public function filter(?callable $callback = null): static;
 
     public function reduce(callable $callback, mixed $initial = null): mixed;
+
+    public function collapse(): static;
 }
