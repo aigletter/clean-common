@@ -55,4 +55,6 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
     public function collapse(): static;
 
     public function random(): mixed;
+
+    public function unique(): static;
 }
