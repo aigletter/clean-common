@@ -53,4 +53,6 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
     public function reduce(callable $callback, mixed $initial = null): mixed;
 
     public function collapse(): static;
+
+    public function random(): mixed;
 }
