@@ -15,4 +15,9 @@ class CollectionFactory
     {
         return self::$factory->make($items);
     }
+
+    public static function makePaginated(array $items = [], int $total = 0): PaginatedCollection
+    {
+        return self::$factory->makePaginated($items, $total);
+    }
 }
