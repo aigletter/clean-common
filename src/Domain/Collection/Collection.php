@@ -104,4 +104,8 @@ interface Collection extends Arrayable, \ArrayAccess, \IteratorAggregate, \Count
     public function withPrepended(mixed ...$value): static;
 
     public function withoutFirst(): static;
+
+    public function sort($callback = null): static;
+
+    public function sortBy($callback, $options = SORT_REGULAR, $descending = false): static;
 }
