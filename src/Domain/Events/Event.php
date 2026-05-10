@@ -6,5 +6,5 @@ interface Event
 {
     public static function code(): string;
 
-    public function occurredAt(): \DateTimeImmutable;
+    public function occurredAt(): \DateTimeInterface;
 }

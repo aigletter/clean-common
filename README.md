@@ -13,5 +13,11 @@ reassigned to capture the new collection instance:
 $collection = $collection->withAppended($element);
 ```
 
+instead of traditional:
+
+```php
+$collection->push($element);
+```
+
 
 However, we believe this is a "lesser evil" compared to the risk of accidental and implicit state changes within the entity.

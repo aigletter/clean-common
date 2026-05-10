@@ -1,8 +1,6 @@
 <?php
 
-namespace Aigletter\CleanCommon\Application\Collections;
-
-use Aigletter\CleanCommon\Domain\Collections\Collection;
+namespace Aigletter\CleanCommon\Domain\Collections;
 
 interface CollectionFactory
 {
