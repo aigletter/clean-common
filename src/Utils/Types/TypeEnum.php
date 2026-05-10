@@ -1,6 +1,6 @@
 <?php
 
-namespace Aigletter\CleanCommon\Utils\Casting;
+namespace Aigletter\CleanCommon\Utils\Types;
 
 enum TypeEnum: string
 {

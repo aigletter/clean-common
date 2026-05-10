@@ -2,16 +2,19 @@
 
 namespace Aigletter\CleanCommon\Utils\Helper;
 
+/**
+ * @deprecated
+ */
 class StringHelperRegistry
 {
-    private static StringHelperInterface $helper;
+    private static StringHelper $helper;
 
-    public static function setHelper(StringHelperInterface $helper): void
+    public static function setHelper(StringHelper $helper): void
     {
         self::$helper = $helper;
     }
 
-    public function getHelper(): StringHelperInterface
+    public function getHelper(): StringHelper
     {
         return self::$helper;
     }
