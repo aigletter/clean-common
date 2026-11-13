@@ -4,7 +4,7 @@ namespace Aigletter\CleanCommon\Domain\Events;
 
 trait OccurredAtTrait
 {
-    private \DateTimeImmutable $occurredAt;
+    readonly private \DateTimeImmutable $occurredAt;
 
     private function initOccurredAt(): void
     {
