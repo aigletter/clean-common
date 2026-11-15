@@ -2,10 +2,12 @@
 
 namespace Aigletter\CleanCommon\Domain\Contracts;
 
-/**
- * @deprecated
- */
 interface Arrayable
 {
+    /**
+     * Returns this object as an array.
+     *
+     * @return array<array-key, mixed>
+     */
     public function toArray(): array;
 }

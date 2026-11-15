@@ -1,23 +1,22 @@
 ## Collections
 
-Collections have been made immutable to ensure proper encapsulation and prevent entities from exposing their internal
-state (ensuring a copy is returned instead of a direct reference).  
-To support this, new immutable methods have been introduced, and existing mutable methods are now marked as deprecated
-(to be removed in the next version).
+`Collection` is the immutable collection contract used by domain state and APIs. Its methods return new collections
+instead of changing the current instance, helping prevent entities from exposing mutable internal state.
+This is a breaking contract change: mutators and `ArrayAccess` are available only through `MutableCollection`.
 
-__Note on Usage__: 
-This approach introduces some overhead in usage. For instance, when adding an element, the variable must be explicitly
-reassigned to capture the new collection instance:
+For temporary local changes, explicitly convert to `MutableCollection`, then convert the result back before storing or
+returning it:
+
+```php
+$working = $collection->toMutable();
+$working->push($element);
+$collection = $working->toImmutable();
+```
+
+For ordinary immutable updates, use the methods that return a new collection:
 
 ```php
 $collection = $collection->withAppended($element);
 ```
 
-instead of traditional:
-
-```php
-$collection->push($element);
-```
-
-
-However, we believe this is a "lesser evil" compared to the risk of accidental and implicit state changes within the entity.
+Conversions copy the collection container; objects stored as elements are not deep-cloned.
