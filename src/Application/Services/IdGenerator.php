@@ -1,6 +1,6 @@
 <?php
 
-namespace Aigletter\CleanCommon\Domain\Services;
+namespace Aigletter\CleanCommon\Application\Services;
 
 interface IdGenerator
 {
