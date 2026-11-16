@@ -7,4 +7,6 @@ use Aigletter\CleanCommon\Domain\Collections\Collection;
 interface PaginatedCollection extends Collection
 {
     public function total(): int;
+
+    public function toMutable(): MutablePaginatedCollection;
 }
